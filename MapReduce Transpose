@@ -1,0 +1,35 @@
+In this example I will do a MapReduce Algorithm to pivot a table.
+
+the input of the algorith is :
+
+| a | b | c |
+| d | e | f |
+
+then the output is :
+
+| a | d |
+| b | e |
+| c | f |
+
+In this example, the key be the row index and the value is the values associated with that row.
+
+
+map(row_index, values):
+   
+      for (column_index = 1 to length values):
+        
+           k = column_index
+           v ={ row_index :values[column_index]}
+      return{ k : v }
+      
+      
+ Pivotvalues = []
+ 
+ for ( a in v[]) :
+ 
+      Pivotvalues[a.k] = a.value
+      Pivot_index = k
+      
+      return {Pivot_index ,Pivotvalues }
+      
+           
