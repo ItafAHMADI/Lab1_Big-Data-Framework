@@ -11,7 +11,7 @@ then the output is :
 | b | e |
 | c | f |
 
-In this example, the key be the row index and the value is the values associated with that row.
+The key is the row index and the value is the values associated with that row.
 The mapper goles is to generate a key_value pair.
 
 { 0 : a} { 1 : b} { 2 : c} { 0 : d} { 1 : e} { 2 : f}
@@ -24,7 +24,7 @@ map(row_index, values):
            v ={ row_index :values[column_index]}
       return{ k : v }
 
-After we do a shuffle and sort phase we got : 
+After we do a shuffle and sort phase we get : 
 
 {0 , [(0 , a) , (0 , d)]}
 {1 , [(1 , b) , (1 , d)]}
